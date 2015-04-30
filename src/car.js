@@ -25,7 +25,9 @@ Car.prototype.off = function() {
 }
 
 Car.prototype.pickUp = function(passengerName) {
-  this.passengers.push(passengerName);
+  if (this.state === "on") {
+    this.passengers.push(passengerName);
+  }
 }
 
 
