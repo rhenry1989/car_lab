@@ -13,7 +13,7 @@ Car.prototype.sale = function(newOwner){
 
 
 Car.prototype.paint = function(newColor){
-
+  this.color = newColor;
 };
 
 
