@@ -8,7 +8,7 @@ describe('Car', function(){
 
   beforeEach(function(){
     // create a new myCar object each time
-    myCar = new Car("Dodge","Charger", 2015, "Red", "off", "", "Manufacturer", "");
+    myCar = new Car("Dodge","Charger", 2015, "Red", "off", [], "Manufacturer", []);
   });
 
   describe('#year', function(){
@@ -42,7 +42,7 @@ describe('Car', function(){
   });
 
   describe('#sale', function(){
-    xit('should move currentOwner to previousOwners array', function(){
+    it('should move currentOwner to previousOwners array', function(){
       myCar.sale("Charlie");
       expect(myCar.previousOwners[0]).to.equal("Manufacturer");
     });
