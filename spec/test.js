@@ -8,7 +8,7 @@ describe('Car', function(){
 
   beforeEach(function(){
     // create a new myCar object each time
-    myCar = new Car("Dodge","Charger", 2015, "Red", "off", [], "Manufacturer", []);
+    myCar = new Car("Dodge","Charger", 2015, "Red", "off", [], "Manufacturer", [], false);
   });
 
   describe('#year', function(){
@@ -102,6 +102,28 @@ describe('Car', function(){
       myCar.off();
       myCar.dropOff("john");
       expect(myCar.passengers[0]).to.equal("john");
+    });
+  });
+
+  // Car parked extension
+
+  describe('#carParked', function(){
+    it('should update the car to be parked', function(){
+      myCar.parked();
+      expect(myCar.isParked).to.equal(true);
+    });
+    
+    it('should update the car to be parked and off', function(){
+      myCar.parked();
+      myCar.off();
+      expect(myCar.state).to.equal("off");
+    });
+    
+    it('should update the car to be parked and off and all passengers leave', function(){
+      myCar.parked();
+      myCar.off();
+      myCar.dropOff();
+      expect(myCar.passengers).to.be.empty;
     });
   });
 

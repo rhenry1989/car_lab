@@ -1,4 +1,4 @@
-function Car(make, model, year, color, state, previousOwners, currentOwner, passengers){
+function Car(make, model, year, color, state, previousOwners, currentOwner, passengers, isParked){
   this.year = year;
   this.state = state;
   this.previousOwners = previousOwners; 
@@ -32,8 +32,12 @@ Car.prototype.pickUp = function(passengerName) {
 
 Car.prototype.dropOff = function() {
   if (this.state === "on") {
-      this.passengers.pop();
+      this.passengers = [];
     } 
+}
+
+Car.prototype.parked = function() {
+  this.isParked = true;
 }
 
 
