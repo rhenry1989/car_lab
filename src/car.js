@@ -30,7 +30,7 @@ Car.prototype.pickUp = function(passengerName) {
   }
 }
 
-Car.prototype.dropOff = function(passengerName) {
+Car.prototype.dropOff = function() {
   if (this.state === "on") {
       this.passengers.pop();
     } 
