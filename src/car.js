@@ -1,5 +1,6 @@
-function Car(make, model, year, color){
+function Car(make, model, year, color, state){
   this.year = year;
+  this.state = state;
 }
 
 Car.prototype.sale = function(newOwner){

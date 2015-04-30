@@ -8,7 +8,7 @@ describe('Car', function(){
 
   beforeEach(function(){
     // create a new myCar object each time
-    myCar = new Car("Dodge","Charger", 2015, "Red");
+    myCar = new Car("Dodge","Charger", 2015, "Red", "off");
   });
 
   describe('#year', function(){
