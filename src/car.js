@@ -30,5 +30,9 @@ Car.prototype.pickUp = function(passengerName) {
   }
 }
 
+Car.prototype.dropOff = function(passengerName) {
+  this.passengers.pop();
+}
+
 
 module.exports=Car;
